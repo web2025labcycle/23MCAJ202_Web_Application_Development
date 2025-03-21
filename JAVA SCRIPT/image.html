@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover to Change Content</title>
+    <style>
+        /* Basic styling for the body */
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #c5a9a9; 
+            text-align: center;
+            padding: 50px;
+            
+        }
+
+        /* Styling for the main content container */
+        .container { 
+            width: 400px; 
+            margin: auto; 
+            padding: 20px; 
+            border-radius: 8px; 
+            background: rgb(241, 234, 245); /* Light purple background */
+        
+        }
+
+        /* Styling for the image */
+        #imageContainer img {
+            width: 100%; /* Makes the image responsive */
+            max-height: 200px;
+            border-radius: 8px; /* Adds rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Main heading -->
+    <h1 id="title">Hover the below text and image</h1>
+
+    <!-- Content container -->
+    <div class="container">
+        <!-- Text that changes on hover -->
+        <h2 id="text">Sunset</h2>
+        
+        <!-- Image container -->
+        <div id="imageContainer">
+            <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Fettjl2rGDjHBlCYCXcWMRAoKDr_AQOoXQ&s" alt="Placeholder Image">
+        </div>
+    </div>
+
+    <script>
+        // Add event listener for mouse hover on the text
+        document.getElementById("text").addEventListener("mouseover", function() {
+            // Change the text when hovered
+            document.getElementById("text").innerText = "Here is a new image and text!";
+            
+            // Change the image source when hovered
+            document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XEWvyObeMa70CJxSbM-Uku9WoNMGF0wxprkupywonkBr7UylJTLiDczs_V2sg3L6idQ&usqp=CAU";
+        });
+    </script>
+
+</body>
+</html>
