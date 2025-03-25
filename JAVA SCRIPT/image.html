@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover to Change Content</title>
+    <style>
+        /* Basic styling for the body */
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #c5a9a9; 
+            text-align: center;
+            padding: 50px;
+            
+        }
+
+        /* Styling for the main content container */
+        .container { 
+            width: 400px; 
+            margin: auto; 
+            padding: 20px; 
+            border-radius: 8px; 
+            background: rgb(241, 234, 245); /* Light purple background */
+        }
+
+        /* Styling for the image */
+        #imageContainer img {
+            width: 200px; /* Sets a fixed width */
+            max-height: 200px;
+            border-radius: 8px; /* Adds rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Content container -->
+    <div class="container">
+        <!-- Text that changes on hover -->
+        <h2 id="text">Feed me</h2>
+        
+        <!-- Image container -->
+        <div id="imageContainer">
+            <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKK1zSX_YjOvNSHlqwuy84X_WMWRSHNigzpA&s" width="300">
+        </div>
+    </div>
+
+    <script>
+        // Add event listener for mouse hover on the text
+        document.getElementById("text").addEventListener("mouseover", function() {
+            // Change the text when hovered
+            document.getElementById("text").innerText = "Happy";
+            
+            // Change the image source when hovered
+            document.getElementById("image").src = "https://i.pinimg.com/474x/83/39/b7/8339b7f84602cf99a3307457b2774bc8.jpg";
+        });
+
+        // Add event listener for mouse out on the text
+        document.getElementById("text").addEventListener("mouseout", function() {
+            // Revert text back to original when mouse is moved away
+            document.getElementById("text").innerText = "Feed me";
+            
+            // Revert image back to original when mouse is moved away
+            document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKK1zSX_YjOvNSHlqwuy84X_WMWRSHNigzpA&s";
+        });
+    </script>
+
+</body>
+</html>
